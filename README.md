@@ -3,7 +3,7 @@
 ## 本作業（HW2）是延續 [HW1 作業](https://github.com/smo612/HW1_7113064188) 作業 基礎所製作，並進一步實作 價值迭代演算法（Value Iteration），用以自動推導出每個狀態下的最佳策略（Optimal Policy） 及對應的價值函數（Value Function）。  
 - 起點、終點、障礙物的設定邏輯與互動方式皆沿用自 HW1。
 - 前端使用介面（HTML / CSS / Grid 操作）與 HW1 相似。
-- 格子n數範圍由5~9改為3~7
+- 格子n數範圍由5-9改為3-7
 
 ## **目錄架構** 
 ```bash

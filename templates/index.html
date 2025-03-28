@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RL Grid World Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <h1>RL Grid World Visualizer</h1>
+
+    <!-- 操作控制區 -->
+    <div id="control-panel">
+        <h2>Step 1: Set Up the Grid</h2>
+        <p>
+            Click on a cell to set: 
+            <span style="color: green; font-weight: bold;">Start</span>, 
+            <span style="color: red; font-weight: bold;">End</span>, 
+            <span style="color: gray; font-weight: bold;">Obstacle</span>. 
+            Click again to remove.
+        </p>
+        <input type="number" id="grid-size" min="3" max="7" value="{{ n }}">
+        <button onclick="initGrid(parseInt(document.getElementById('grid-size').value))">Generate Grid</button>
+        <button onclick="resetGrid()">Reset Grid</button>
+        <button onclick="generatePolicyValue()">Run Value Iteration</button>
+        <div id="obstacle-counter" style="margin-top: 10px;">Remaining Obstacles: 0 / 3</div>
+    </div>
+
+    <!-- Grid -->
+    <table id="grid"></table>
+
+    <!-- 策略與價值 -->
+    <h2>Step 2: Optimal Policy & Value Function</h2>
+    <p style="font-size: 14px; color: gray;">
+        Yellow cells indicate the optimal path from <strong>Start</strong> to <strong>End</strong>.
+    </p>
+
+    <div id="hw2-container">
+        <div>
+            <h3>Optimal Policy</h3>
+            <table id="policy-matrix"></table>
+        </div>
+        <div>
+            <h3>Value Function</h3>
+            <table id="value-matrix"></table>
+        </div>
+    </div>
+</body>
+</html>

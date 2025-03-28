@@ -1,0 +1,71 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.start {
+    background-color: green;
+}
+
+td.end {
+    background-color: red;
+}
+
+td.obstacle {
+    background-color: gray;
+}
+
+#hw2-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+#control-panel {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#obstacle-counter {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+td.end {
+    background-color: red !important; /* 原本的終點在 HW1-1 內仍保持紅色 */
+    color: white !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.optimal-path {
+    background-color: yellow !important; /* 讓最佳路徑變成黃色 */
+}
+
+#policy-matrix td.optimal-path {
+    background-color: yellow !important; /* 確保 Optimal Policy 內的最佳路徑變黃 */
+    color: black !important;
+    font-weight: bold;
+}
+
+#policy-matrix td.end {
+    background-color: yellow !important; /* 讓 Optimal Policy 內的終點也變黃 */
+    color: black !important;
+    font-weight: bold;
+}
+
